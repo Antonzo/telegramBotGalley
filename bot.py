@@ -26,7 +26,7 @@ def help_msg(message):
 
 @bot.message_handler(commands=['reported'])
 def reported_msg(message):
-    bot.send_message(message.chat.id, ('Нет @' + message.from.username))
+    bot.send_message(message.chat.id, ('Нет @' + message.from_user.username))
     bot.delete_message(message.chat.id, message)
 
 @bot.message_handler(commands=['sendreported'])
