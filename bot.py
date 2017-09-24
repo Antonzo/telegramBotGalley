@@ -32,7 +32,7 @@ def reported_msg(message):
 @bot.message_handler(commands=['sendreported'])
 def send_reported_msg(message):
     bot.send_message(message.chat.id, ('/reported'))
-    bot.delete_message(message.chat.id, message)
+    bot.delete_message(message.chat.id, message.message_id)
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)
