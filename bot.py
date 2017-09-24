@@ -21,12 +21,12 @@ def answer_all_msg(message):
 def answer_all_msg(message):
     bot.send_message(message.chat.id, '/help - справка\n'
                                       '/oceanman - отправить оушенмена\n'
-                                      '/reported - пойти к чёрту\n')
+                                      '/reported - нет\n')
 
 
 @bot.message_handler(commands=['reported'])
 def answer_all_msg(message):
-    bot.send_message(message.chat.id, ('Иди к чёрту @' + message.user.username))
+    bot.send_message(message.chat.id, ('Нет @' + message.user.username))
     bot.delete_message(message.chat.id, message)
 
 
